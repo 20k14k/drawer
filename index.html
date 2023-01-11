@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawer like Mobile</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="slider">
+                <div class="slidebox">
+                    <div id="slideback"></div>
+                    <div class="slidehead" id="slidehead1">
+                        All
+                    </div>
+                    <div class="slidehead" id="slidehead2">
+                        Specific
+                    </div>
+                </div>
+            </div>
+            <div class="drawerholder">
+                <div class="drawercontainer" id="drawercontainer">
+                    <div class="drawer" id="drawer1">
+                        <div class="itumbox">Hello</div>
+                        <div class="itumbox">Hii</div>
+                        <div class="itumbox">Hello</div>
+                        <div class="itumbox">Hii</div>
+                        <div class="itumbox">Hello</div>
+                        <div class="itumbox">Hii</div>
+                    </div>
+                    <div class="drawer" id="drawer2">
+                        <div class="itumbox">Karan</div>
+                        <div class="itumbox">kushwaha</div>
+                        <div class="itumbox">Karan</div>
+                        <div class="itumbox">kushwaha</div>
+                        <div class="itumbox">Karan</div>
+                        <div class="itumbox">kushwaha</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let head1 = document.getElementById("slidehead1")
+        let head2 = document.getElementById("slidehead2")
+        let slideback = document.getElementById("slideback")
+        let drawercontainer = document.getElementById("drawercontainer")
+
+        head1.addEventListener("click", onnall)
+        function onnall() {
+            slideback.classList.add("all")
+            slideback.classList.remove("specific")
+
+            drawercontainer.classList.remove("onndrawer2")
+        }
+        head2.addEventListener("click", onnspecific)
+        function onnspecific() {
+            slideback.classList.add("specific")
+            slideback.classList.remove("all")
+
+            drawercontainer.classList.add("onndrawer2")
+        }
+    </script>
+</body>
+</html>
